@@ -19,6 +19,24 @@ When everything is up and running, go ahead and see if you can get the node.js p
 ## Exercise 3
 Follow [Basics tutorial | Node | gRPC](https://grpc.io/docs/languages/node/basics/) and consider the following:
 - What is the difference (and pros and cons) between static and dynamic generation of Protocol Buffer code?
+### Static Generation:
+#### Pros:
+Generated code is precompiled during the build process, leading to better performance.
+Provides compile-time type safety and validation, catching errors early in the development process.
+Integration with IDEs and development tools for auto-completion, syntax highlighting, and refactoring support.
+#### Cons:
+Requires regeneration of code whenever the .proto file is modified, which can slow down development iteration.
+Increases the size of the compiled binary due to inclusion of generated code.
+May result in longer build times, especially for large projects with extensive Protocol Buffer definitions.
+### Dynamic Generation:
+#### Pros:
+Code is generated at runtime, allowing for flexibility and adaptation to changes in the .proto file without the need to recompile.
+Reduced build times during development, as code generation is deferred until runtime.
+Well-suited for scenarios where the Protocol Buffer schema is dynamic or frequently changing.
+#### Cons:
+Performance overhead due to dynamic code generation and interpretation at runtime.
+Lack of compile-time type safety and validation, potentially leading to runtime errors if the .proto file is modified incorrectly.
+Limited support for IDE features such as auto-completion and syntax checking, as the code is generated dynamically.
 
 ## Exercise 4 (**Optional**)
 Create a Node or .NET app that should act as a gRPC server. Create a protobuf file, with the following two remote procedure calls
