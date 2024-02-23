@@ -12,7 +12,9 @@ When everything is up and running, go ahead and see if you can get the .NET proj
 Start by spinning up the code from `Lecture 08 - Remote procedure calls (gRPC)/exercises/node`. 
 
 When everything is up and running, go ahead and see if you can get the node.js projects to speak with the .NET code from `Exercise 1`, consider the following:
+> we need to change the port of the client in the greeter_client.js file. then we need to adjust the package imported from the protos file.
 - Is it possible to use the same `proto` file to generate code for various programming languages (in our case: C# and JavaScript)?
+> Yes, it is possible to use the same .proto file to generate code for various programming languages, including C# and JavaScript.
 
 ## Exercise 3
 Follow [Basics tutorial | Node | gRPC](https://grpc.io/docs/languages/node/basics/) and consider the following:
