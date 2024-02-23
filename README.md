@@ -18,6 +18,28 @@ When everything is up and running, go ahead and see if you can get the node.js p
 
 ## Exercise 3
 Follow [Basics tutorial | Node | gRPC](https://grpc.io/docs/languages/node/basics/) and consider the following:
+after following the tutorial we been able to create a server and a client with the posibility to ping/pong an echo message.  Run the projects by running the we recieve the following output:
+```bash
+Visiting point 41.2950425, -74.1077389
+Visiting point 40.8031728, -74.8645385
+Visiting point 41.21278, -74.0173578
+Visiting point 41.8858923, -74.615679
+Visiting point 41.7951888, -74.8484944
+Visiting point 41.9018117, -74.9142781
+Visiting point 40.8122808, -74.3999179
+Visiting point 41.0395868, -74.4972325
+Visiting point 41.8811433, -74.1718005
+Visiting point 40.5957808, -74.3255336
+Finished trip with 10 points
+Passed 7 features
+Travelled 688936 meters
+It took 10 seconds
+Sending message "First message" at 0, 0
+Sending message "Second message" at 0, 1
+Sending message "Third message" at 1, 0
+Sending message "Fourth message" at 0,
+```
+
 - What is the difference (and pros and cons) between static and dynamic generation of Protocol Buffer code?
 ### Static Generation:
 #### Pros:
