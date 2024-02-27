@@ -68,3 +68,39 @@ Create a Node or .NET app that should act as a gRPC server. Create a protobuf fi
 Create the needed message types and implement simple + and - functionality
 
 Create a Node or .NET gRPC clint application (don't choose same as above) than uses the same protebuf file. And sends add/subtract requests to your server - either through a web ui or console application.
+
+
+## Questions 
+
+- What is the differences between gRPC and REST?
+    gRPC uses HTTP/2 for transport, whereas REST typically uses HTTP/1.1.
+    gRPC uses protocol buffers for serialization, while REST commonly uses JSON.
+    gRPC supports bidirectional streaming, while REST typically follows a request-response model.
+    gRPC generates client libraries automatically, while REST relies on manually crafted clients.
+- How is protobuf used to serialize data in gRPC services?
+    Protocol Buffers (protobuf) are used in gRPC to serialize structured data efficiently. Protobuf defines a language-agnostic interface for serializing data, which helps in communication between different systems in a compact and efficient manner.
+- What are the pros and cons of using gRPC?
+    Pros:
+        Efficient binary serialization with protobuf.
+        Support for bidirectional streaming.
+        Automatic generation of client libraries.
+    Cons:
+        Requires HTTP/2 support, which might not be available in all environments.
+        Can be more complex to set up compared to REST.
+        Limited browser support due to HTTP/2 requirements.
+- Consider how to handle changes in the gRPC protocol?
+    Use protocol buffer versioning to maintain backward compatibility.
+    Consider using gRPC's support for evolving APIs through backward-compatible changes.
+    Communicate changes effectively and provide migration guides when updating the API.
+- Where would you prefer using gRPC over Rest or GraphQL?
+    Need high-performance, low-latency communication.
+    Working in a microservices architecture.
+    Require bidirectional streaming or efficient binary serialization.
+- What dependecies are needed when implementing a gRPC service in ASP.NET Core?
+    Grpc.AspNetCore for gRPC server implementation.
+    Google.Protobuf for Protocol Buffers support.
+    Optionally, Grpc.Tools for code generation.
+- What dependencies are needed when implementing a gRPC client i ASP.NET Core?
+    $Grpc.Net.Client$ for gRPC client implementation.
+    $Google.Protobuf$ for Protocol Buffers support.
+    Optionally, $Grpc.Tools$ for code generation.
